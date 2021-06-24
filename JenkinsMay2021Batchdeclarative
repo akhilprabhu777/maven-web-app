@@ -22,7 +22,7 @@ stages{
    git branch: 'development', credentialsId: '6a6dfb50-0907-46a0-9303-c9c87db27742', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
  }
  }
- 
+  /*
  stage('Build'){
   steps{
   sh "mvn clean package"
@@ -35,7 +35,7 @@ stages{
   sh "mvn clean sonar:sonar"
   }
  }
- /*
+
  stage('UploadArtifactIntoNexus'){
   steps{
   sh "mvn clean deploy"
