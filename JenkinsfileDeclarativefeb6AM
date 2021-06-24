@@ -42,6 +42,13 @@ stage('ExecuteSonarqubeReport')
 	}
   }
   
+  stage('ExecuteSonarqubeReportandPackageWAR')
+  {
+    steps{
+	sh "mvn sonar:sonar package"
+	}
+  }
+  
   stage('UploadArtifactsintoNexus')
   {
     steps{
